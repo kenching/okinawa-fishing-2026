@@ -1,0 +1,563 @@
+<title>沖繩釣魚團 2026</title>
+<style>
+  :root {
+    --ground: #faf6ee;
+    --surface: #ffffff;
+    --surface-2: #f2ebdd;
+    --border: #e3d8c2;
+    --ink: #14262c;
+    --ink-soft: #4a5c62;
+    --ink-faint: #7c8a8e;
+    --deep: #0b3d4d;
+    --teal: #0e7c86;
+    --lagoon: #2fa9b4;
+    --sand: #e9d9b8;
+    --coral: #ef6a45;
+    --coral-soft: #fdeee7;
+    --shadow: 0 6px 24px rgba(11, 61, 77, 0.10);
+    --shadow-sm: 0 2px 10px rgba(11, 61, 77, 0.07);
+    --radius: 18px;
+    --maxw: 860px;
+    --hero-1: #0b3d4d;
+    --hero-2: #0e7c86;
+    --hero-3: #2fa9b4;
+    --hero-sun: rgba(239, 106, 69, 0.55);
+    --chip-bg: #e6f2f2;
+    --chip-ink: #0b5560;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #071d24;
+      --surface: #0e2c35;
+      --surface-2: #0a252d;
+      --border: #1c4450;
+      --ink: #e7f1f0;
+      --ink-soft: #a9c2c4;
+      --ink-faint: #7fa0a3;
+      --deep: #061922;
+      --teal: #2ba1ab;
+      --lagoon: #47c3ce;
+      --sand: #d9c398;
+      --coral: #ff835f;
+      --coral-soft: #2a2019;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.35);
+      --chip-bg: #123840;
+      --chip-ink: #7fd6df;
+    }
+  }
+  :root[data-theme="light"] {
+    --ground: #faf6ee; --surface: #ffffff; --surface-2: #f2ebdd; --border: #e3d8c2;
+    --ink: #14262c; --ink-soft: #4a5c62; --ink-faint: #7c8a8e; --deep: #0b3d4d;
+    --teal: #0e7c86; --lagoon: #2fa9b4; --sand: #e9d9b8; --coral: #ef6a45;
+    --coral-soft: #fdeee7; --shadow: 0 6px 24px rgba(11,61,77,0.10);
+    --shadow-sm: 0 2px 10px rgba(11,61,77,0.07); --chip-bg: #e6f2f2; --chip-ink: #0b5560;
+  }
+  :root[data-theme="dark"] {
+    --ground: #071d24; --surface: #0e2c35; --surface-2: #0a252d; --border: #1c4450;
+    --ink: #e7f1f0; --ink-soft: #a9c2c4; --ink-faint: #7fa0a3; --deep: #061922;
+    --teal: #2ba1ab; --lagoon: #47c3ce; --sand: #d9c398; --coral: #ff835f;
+    --coral-soft: #2a2019; --shadow: 0 8px 30px rgba(0,0,0,0.45);
+    --shadow-sm: 0 2px 12px rgba(0,0,0,0.35); --chip-bg: #123840; --chip-ink: #7fd6df;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "PingFang HK", "PingFang TC", "Hiragino Sans", "Noto Sans HK",
+                 "Microsoft JhengHei", "Heiti TC", system-ui, -apple-system, sans-serif;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background:
+      radial-gradient(120% 90% at 82% -10%, var(--hero-sun) 0%, rgba(239,106,69,0) 42%),
+      linear-gradient(165deg, var(--hero-1) 0%, var(--hero-2) 52%, var(--hero-3) 100%);
+    padding: 64px 20px 92px;
+    text-align: center;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: -2px; height: 60px;
+    background:
+      radial-gradient(50% 130% at 50% 0%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0) 70%);
+  }
+  .waves { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 46px; display: block; }
+  .hero-inner { position: relative; z-index: 2; max-width: 620px; margin: 0 auto; }
+  .eyebrow {
+    display: inline-block;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .hero h1 {
+    font-size: clamp(2.3rem, 8vw, 3.4rem);
+    line-height: 1.12;
+    margin: 20px 0 10px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.22);
+  }
+  .hero .meta {
+    font-size: clamp(1rem, 3.6vw, 1.18rem);
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.96;
+    margin: 0 0 14px;
+  }
+  .hero .meta span { white-space: nowrap; }
+  .hero .dot { opacity: 0.55; margin: 0 8px; }
+  .hero .summary {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 460px;
+    margin: 0 auto;
+    text-wrap: pretty;
+  }
+
+  /* ---------- Sticky nav ---------- */
+  nav.tabs {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.tabs .row {
+    display: flex; gap: 4px; overflow-x: auto; max-width: var(--maxw);
+    margin: 0 auto; padding: 10px 12px;
+    scrollbar-width: none;
+  }
+  nav.tabs .row::-webkit-scrollbar { display: none; }
+  nav.tabs a {
+    flex: 0 0 auto;
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 7px 13px;
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+  nav.tabs a:hover, nav.tabs a:focus-visible { background: var(--chip-bg); color: var(--chip-ink); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 44px 0 8px; scroll-margin-top: 64px; }
+  .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px; }
+  .sec-head .ico { font-size: 1.4rem; line-height: 1; }
+  .sec-head h2 {
+    font-size: clamp(1.4rem, 5vw, 1.75rem);
+    margin: 0; font-weight: 800; letter-spacing: 0.01em; color: var(--ink);
+    text-wrap: balance;
+  }
+
+  /* ---------- Quick facts ---------- */
+  .facts {
+    display: grid; gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .fact {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 16px 16px 14px; box-shadow: var(--shadow-sm);
+  }
+  .fact .k {
+    font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 700; display: block; margin-bottom: 4px;
+  }
+  .fact .v { font-size: 1.06rem; font-weight: 700; color: var(--ink); }
+  .fact .v small { display: block; font-weight: 500; font-size: 0.85rem; color: var(--ink-soft); margin-top: 2px; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { display: flex; flex-direction: column; gap: 18px; }
+  .day {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .day-head {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 18px;
+    background: linear-gradient(100deg, var(--teal), var(--lagoon));
+    color: #fff;
+  }
+  .day-num {
+    flex: 0 0 auto;
+    width: 46px; height: 46px; border-radius: 12px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 1.15rem;
+  }
+  .day-head .dh-t { font-weight: 800; font-size: 1.08rem; }
+  .day-head .dh-s { font-size: 0.85rem; opacity: 0.92; font-weight: 600; }
+  .day.sea .day-head { background: linear-gradient(100deg, var(--deep), var(--teal)); }
+  .badge-sea {
+    margin-left: auto; flex: 0 0 auto;
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em;
+    background: var(--coral); color: #fff;
+    padding: 5px 11px; border-radius: 999px;
+    white-space: nowrap;
+  }
+  .steps { list-style: none; margin: 0; padding: 14px 18px 18px; }
+  .steps li {
+    display: flex; gap: 14px; padding: 9px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .steps li:last-child { border-bottom: 0; }
+  .steps .t {
+    flex: 0 0 62px; font-weight: 800; color: var(--teal);
+    font-variant-numeric: tabular-nums; font-size: 0.95rem; padding-top: 1px;
+  }
+  .steps .d { flex: 1; color: var(--ink); }
+  .steps .d b { color: var(--ink); }
+  .steps.plain .t { flex: 0 0 auto; color: var(--coral); font-size: 1.05rem; padding-top: 0; }
+
+  /* ---------- Cards ---------- */
+  .cards { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 620px) { .cards { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .card.feat { border-color: var(--coral); box-shadow: 0 0 0 1px var(--coral) inset, var(--shadow-sm); }
+  .card .ct { font-weight: 800; font-size: 1.08rem; color: var(--ink); line-height: 1.4; }
+  .card .cs { font-size: 0.82rem; color: var(--ink-faint); font-weight: 600; margin-top: -4px; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+  .card .link {
+    margin-top: auto; align-self: flex-start;
+    text-decoration: none; font-weight: 700; font-size: 0.9rem;
+    color: var(--teal);
+    padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border);
+    background: var(--surface-2);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .card .link:hover, .card .link:focus-visible { background: var(--chip-bg); border-color: var(--teal); color: var(--chip-ink); }
+  .card .link[aria-disabled="true"] {
+    pointer-events: none; color: var(--ink-faint); background: transparent; border-style: dashed;
+  }
+  .card.wide { grid-column: 1 / -1; }
+
+  /* tags */
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+  .tag {
+    font-size: 0.82rem; font-weight: 700; color: var(--chip-ink);
+    background: var(--chip-bg); padding: 6px 12px; border-radius: 999px;
+  }
+  .tag.coral { color: #fff; background: var(--coral); }
+
+  /* note box */
+  .note {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--coral-soft); border: 1px solid var(--border);
+    border-left: 4px solid var(--coral);
+    border-radius: 12px; padding: 13px 15px; margin-top: 16px;
+    font-size: 0.92rem; color: var(--ink-soft);
+  }
+  .note .ni { flex: 0 0 auto; font-size: 1.05rem; }
+
+  /* tips */
+  .tips { display: flex; flex-direction: column; gap: 12px; }
+  .tip {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 15px 17px; box-shadow: var(--shadow-sm);
+  }
+  .tip .th { font-weight: 800; color: var(--ink); margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+  .tip ul { margin: 0; padding-left: 1.15em; color: var(--ink-soft); }
+  .tip li { margin: 4px 0; }
+
+  a { color: var(--teal); }
+  :focus-visible { outline: 3px solid var(--lagoon); outline-offset: 2px; border-radius: 6px; }
+
+  footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    padding: 26px 20px 40px;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 0.85rem;
+  }
+  footer .sun { color: var(--coral); font-size: 1.2rem; display: block; margin-bottom: 8px; }
+</style>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Okinawa · 沖繩本島</span>
+    <h1>🎣 沖繩釣魚團 2026</h1>
+    <p class="meta">
+      <span>7月28–31日</span><span class="dot">·</span><span>4日3夜</span><span class="dot">·</span><span>9人自駕</span>
+    </p>
+    <p class="summary">兩架七人車自駕，落腳北谷 Chatan／美國村，7/29 同 7/30 全日出海釣魚，晚晚食返自己釣嘅魚穫 🐟🍶</p>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 24 C 180 4, 300 44, 480 30 C 660 16, 780 46, 960 32 C 1140 18, 1260 44, 1440 26 L1440 46 L0 46 Z" fill="var(--ground)"/>
+  </svg>
+</header>
+
+<nav class="tabs" aria-label="章節導覽">
+  <div class="row">
+    <a href="#info">快速資訊</a>
+    <a href="#plan">逐日行程</a>
+    <a href="#stay">住宿</a>
+    <a href="#food">餐廳</a>
+    <a href="#tips">貼士</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- Quick facts -->
+  <section id="info">
+    <div class="sec-head"><span class="ico">📋</span><h2>快速資訊</h2></div>
+    <div class="facts">
+      <div class="fact"><span class="k">日期</span><span class="v">7月28–31日<small>4日3夜（二至五）</small></span></div>
+      <div class="fact"><span class="k">人數</span><span class="v">9 人</span></div>
+      <div class="fact"><span class="k">交通</span><span class="v">自駕<small>兩架七人車</small></span></div>
+      <div class="fact"><span class="k">大本營</span><span class="v">北谷 Chatan<small>美國村一帶</small></span></div>
+      <div class="fact"><span class="k">出海日</span><span class="v">7/29 &amp; 7/30<small>7:00–17:00 全日</small></span></div>
+    </div>
+  </section>
+
+  <!-- Day by day -->
+  <section id="plan">
+    <div class="sec-head"><span class="ico">🗓️</span><h2>逐日行程</h2></div>
+    <div class="timeline">
+
+      <article class="day">
+        <div class="day-head">
+          <div class="day-num">1</div>
+          <div>
+            <div class="dh-t">7/28（二）· 抵達</div>
+            <div class="dh-s">那霸落機 → 入住北谷 → 美國村行街</div>
+          </div>
+        </div>
+        <ul class="steps">
+          <li><span class="t">落機</span><span class="d">那霸機場攞車（兩架七人車），check 好裝備行李</span></li>
+          <li><span class="t">約40分</span><span class="d">揸去 <b>北谷 Chatan</b> 入住，放低行李</span></li>
+          <li><span class="t">下午</span><span class="d">行 <b>美國村</b>、行埋 <b>日落海灘 Sunset Beach</b> 睇日落</span></li>
+          <li><span class="t">晚餐</span><span class="d">くしかど <b>Kushikado</b> 串燒放題＋飲放題，食飽飽準備聽日出海 🍢🍺</span></li>
+        </ul>
+      </article>
+
+      <article class="day sea">
+        <div class="day-head">
+          <div class="day-num">2</div>
+          <div>
+            <div class="dh-t">7/29（三）· 出海一</div>
+            <div class="dh-s">全日出海釣魚 · 晚上入那霸食魚穫</div>
+          </div>
+          <span class="badge-sea">🎣 出海日</span>
+        </div>
+        <ul class="steps">
+          <li><span class="t">6:30</span><span class="d">酒店／便利店食早餐，帶定防曬同暈浪藥</span></li>
+          <li><span class="t">7:00</span><span class="d"><b>碼頭集合開船</b> 🚤（船已 book 好）</span></li>
+          <li><span class="t">17:00</span><span class="d">埋岸收隊，執好今日魚穫</span></li>
+          <li><span class="t">傍晚</span><span class="d">回酒店沖涼抖抖</span></li>
+          <li><span class="t">晚餐</span><span class="d">揸去那霸 <b>海人居酒屋 一郎屋</b>，煮返今日親手釣嘅魚 🐟（記得預先講定條數同時間）</span></li>
+        </ul>
+      </article>
+
+      <article class="day sea">
+        <div class="day-head">
+          <div class="day-num">3</div>
+          <div>
+            <div class="dh-t">7/30（四）· 出海二</div>
+            <div class="dh-s">全日出海釣魚 · 慶功晚餐</div>
+          </div>
+          <span class="badge-sea">🎣 出海日</span>
+        </div>
+        <ul class="steps">
+          <li><span class="t">6:30</span><span class="d">早餐（同樣流程）</span></li>
+          <li><span class="t">7:00</span><span class="d"><b>碼頭集合開船</b> 🚤</span></li>
+          <li><span class="t">17:00</span><span class="d">埋岸，最後一日盡情釣</span></li>
+          <li><span class="t">晚餐</span><span class="d">留喺北谷或恩納 <b>Toto Chanpuru</b> 或 <b>ちぬまん Chinuman</b>，睇三線 live 慶功 🎶🍶</span></li>
+        </ul>
+      </article>
+
+      <article class="day">
+        <div class="day-head">
+          <div class="day-num">4</div>
+          <div>
+            <div class="dh-t">7/31（五）· 離開</div>
+            <div class="dh-s">買手信 → 還車 → 機場返程</div>
+          </div>
+        </div>
+        <ul class="steps">
+          <li><span class="t">上午</span><span class="d">瞓到自然醒，慢慢執行李</span></li>
+          <li><span class="t">午前</span><span class="d">泊 <b>Tomari いゆまち 魚市場</b> 買手信／食新鮮刺身，或去美國村 shopping</span></li>
+          <li><span class="t">之後</span><span class="d">還車 → 那霸機場返程 ✈️</span></li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Stay -->
+  <section id="stay">
+    <div class="sec-head"><span class="ico">🏨</span><h2>住宿建議</h2></div>
+    <p style="margin:-8px 0 18px;color:var(--ink-soft);font-size:0.95rem;">9人、兩架車、要泊車位。以下幾個方向揀啱自己隊型：</p>
+    <div class="cards">
+
+      <div class="card feat">
+        <div class="ct">Hilton Okinawa Chatan Resort</div>
+        <div class="cs">北谷 · 大酒店</div>
+        <p>訂 4–5 間房，免費泊車，行得到美國村同碼頭，最方便穩陣。</p>
+        <div class="tags"><span class="tag">免費泊車</span><span class="tag">近美國村</span></div>
+        <a class="link" href="https://www.hilton.com/en/hotels/okahihi-hilton-okinawa-chatan-resort/" target="_blank" rel="noopener">睇酒店 →</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">北谷／美國村 公寓式 Villa</div>
+        <div class="cs">Airbnb / Vrbo · 一屋住晒</div>
+        <p>有廚房、免費泊車（部分泊到兩架車），一屋住晒9人，出海前一齊食早餐超方便。</p>
+        <div class="tags"><span class="tag">有廚房</span><span class="tag">一屋9人</span></div>
+        <a class="link" href="https://www.airbnb.com/chatan-nakagami-district-japan/stays" target="_blank" rel="noopener">Airbnb →</a>
+        <a class="link" href="https://www.vrbo.com/vacation-rentals/japan/okinawa-prefecture/chatan" target="_blank" rel="noopener" style="margin-top:0;">Vrbo →</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">Grandioso 恩納 Pool Villa</div>
+        <div class="cs">恩納 · 私人泳池 Villa</div>
+        <p>可住12人、私人泳池、BBQ、免費泊車，夠晒爽。不過離碼頭遠啲，配7:00開船辛苦少少。</p>
+        <div class="tags"><span class="tag">私人泳池</span><span class="tag">BBQ</span><span class="tag coral">離碼頭遠</span></div>
+        <a class="link" href="https://www.booking.com/hotel/jp/grandioso-okinawa-pool-villa-onna-9-vacation-stay-90315v.html" target="_blank" rel="noopener">睇Villa →</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">那霸市區備選</div>
+        <div class="cs">Rihga Royal Gran / Tokyu Stay Naha</div>
+        <p>若釣魚船改喺那霸出發，可考慮呢兩間。市區泊車多數收費，要確認泊到兩架車位。</p>
+        <div class="tags"><span class="tag">市區</span><span class="tag coral">泊車要確認</span></div>
+        <a class="link" aria-disabled="true">船改那霸先考慮</a>
+      </div>
+
+    </div>
+    <div class="note">
+      <span class="ni">⚠️</span>
+      <span>旺季（7月尾）房態緊張，價錢僅供參考。落訂前記得確認 9人房型／床位同泊車位。</span>
+    </div>
+  </section>
+
+  <!-- Food -->
+  <section id="food">
+    <div class="sec-head"><span class="ico">🍶</span><h2>餐廳 / 居酒屋</h2></div>
+    <div class="cards">
+
+      <div class="card feat">
+        <div class="ct">⭐ 海人居酒屋 一郎屋</div>
+        <div class="cs">那霸 牧志／美榮橋</div>
+        <p>幫你煮返自己親手釣嘅魚 🐟，約 6円／克。一定要預先講定條數同時間！</p>
+        <div class="tags"><span class="tag coral">代煮魚穫</span><span class="tag">要預約</span></div>
+        <a class="link" href="https://tsurikitchen.com/detail/19" target="_blank" rel="noopener">睇詳情 →</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">ちぬまん Chinuman</div>
+        <div class="cs">國際通／恩納</div>
+        <p>沖繩料理，有三線現場 live，夠熱鬧，啱大團 high。</p>
+        <div class="tags"><span class="tag">三線 live</span><span class="tag">啱大團</span></div>
+        <a class="link" href="https://www.chinuman.com/" target="_blank" rel="noopener">官網 →</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">くしかど Kushikado</div>
+        <div class="cs">北谷</div>
+        <p>串燒放題＋飲放題，抵食夠飽，第一晚落腳首選 🍢。</p>
+        <div class="tags"><span class="tag">放題</span><span class="tag">飲放題</span></div>
+        <a class="link" aria-disabled="true">現場／電話訂位</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">Toto Chanpuru</div>
+        <div class="cs">恩納</div>
+        <p>全私人榻榻米房，9人坐得舒服，傾偈慶功一流。</p>
+        <div class="tags"><span class="tag">私人房</span><span class="tag">榻榻米</span></div>
+        <a class="link" aria-disabled="true">建議訂私人房</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">THE POST CHATAN / Seafood House Pier 54</div>
+        <div class="cs">北谷</div>
+        <p>海鮮／刺身。Pier 54 仲可以幫手煮魚穫兼睇日落，一舉兩得 🌅。</p>
+        <div class="tags"><span class="tag">海鮮刺身</span><span class="tag">睇日落</span></div>
+        <a class="link" aria-disabled="true">現場／電話訂位</a>
+      </div>
+
+      <div class="card">
+        <div class="ct">🍜 必試名物</div>
+        <div class="cs">沖繩在地味道</div>
+        <p>沖繩そば、Agu豬（アグー豚）、海葡萄（海ぶどう）、石垣牛、泡盛、Taco Rice。</p>
+        <div class="tags"><span class="tag">沖繩そば</span><span class="tag">Agu豬</span><span class="tag">海葡萄</span><span class="tag">泡盛</span></div>
+      </div>
+
+    </div>
+    <div class="note">
+      <span class="ni">📞</span>
+      <span>沖繩居酒屋多數細間，9人一定要預先訂位／訂 banquet 房，旺季尤其要早 book。</span>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section id="tips">
+    <div class="sec-head"><span class="ico">📌</span><h2>貼士</h2></div>
+    <div class="tips">
+      <div class="tip">
+        <p class="th">🎣 出海</p>
+        <ul>
+          <li>兩日最好搭同一間船（碼頭固定，唔使周圍走）</li>
+          <li>帶定防曬、暈浪藥、太陽眼鏡、換洗衫</li>
+          <li>早餐可以喺酒店／便利店買定，7:00開船趕時間</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <p class="th">🚗 自駕</p>
+        <ul>
+          <li>日本靠左行駛，記得慢慢嚟</li>
+          <li>泊車揀有免費 parking 嘅酒店</li>
+          <li>兩架車keep住聯絡（開定群組／對講）</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <p class="th">🌦️ 天氣</p>
+        <ul>
+          <li>7月尾係颱風季邊緣，出海前留意天氣預報</li>
+          <li>船家可能因天氣調整班次，保持彈性</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="sun">🌺</span>
+  行程由 Claude 整理 · 資料僅供參考，落訂前請向店家確認
+</footer>
