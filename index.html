@@ -1,69 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
 <title>沖繩釣魚團 2026</title>
 <style>
   :root {
-    --ground: #faf6ee;
+    --ground: #fbf8f2;
     --surface: #ffffff;
-    --surface-2: #f2ebdd;
-    --border: #e3d8c2;
-    --ink: #14262c;
-    --ink-soft: #4a5c62;
-    --ink-faint: #7c8a8e;
-    --deep: #0b3d4d;
-    --teal: #0e7c86;
-    --lagoon: #2fa9b4;
-    --sand: #e9d9b8;
-    --coral: #ef6a45;
-    --coral-soft: #fdeee7;
-    --shadow: 0 6px 24px rgba(11, 61, 77, 0.10);
-    --shadow-sm: 0 2px 10px rgba(11, 61, 77, 0.07);
+    --surface-2: #f3eee2;
+    --border: #d9cfba;
+    --ink: #161616;
+    --ink-soft: #2b2b2b;
+    --ink-label: #3d4a4e;
+    --deep: #0a3946;
+    --teal: #0b6570;
+    --teal-strong: #095059;
+    --lagoon: #157f8a;
+    --coral: #c74a24;
+    --coral-soft: #fbeee7;
+    --shadow: 0 6px 22px rgba(11, 61, 77, 0.12);
+    --shadow-sm: 0 2px 10px rgba(11, 61, 77, 0.10);
     --radius: 18px;
-    --maxw: 860px;
-    --hero-1: #0b3d4d;
-    --hero-2: #0e7c86;
-    --hero-3: #2fa9b4;
-    --hero-sun: rgba(239, 106, 69, 0.55);
-    --chip-bg: #e6f2f2;
-    --chip-ink: #0b5560;
+    --maxw: 820px;
+    --hero-1: #0a3946;
+    --hero-2: #0b6570;
+    --hero-3: #157f8a;
+    --hero-sun: rgba(199, 74, 36, 0.5);
+    --chip-bg: #dfeeef;
+    --chip-ink: #084b54;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --ground: #071d24;
-      --surface: #0e2c35;
-      --surface-2: #0a252d;
-      --border: #1c4450;
-      --ink: #e7f1f0;
-      --ink-soft: #a9c2c4;
-      --ink-faint: #7fa0a3;
+      --ground: #08222a;
+      --surface: #0f313b;
+      --surface-2: #0b2932;
+      --border: #2a5764;
+      --ink: #f4faf9;
+      --ink-soft: #dbeae9;
+      --ink-label: #b9d4d6;
       --deep: #061922;
-      --teal: #2ba1ab;
-      --lagoon: #47c3ce;
-      --sand: #d9c398;
-      --coral: #ff835f;
-      --coral-soft: #2a2019;
-      --shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-      --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.35);
+      --teal: #4fc3cd;
+      --teal-strong: #6dd4dd;
+      --lagoon: #5fcfd9;
+      --coral: #ff8a63;
+      --coral-soft: #33241c;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.4);
       --chip-bg: #123840;
-      --chip-ink: #7fd6df;
+      --chip-ink: #a6ecf3;
     }
   }
   :root[data-theme="light"] {
-    --ground: #faf6ee; --surface: #ffffff; --surface-2: #f2ebdd; --border: #e3d8c2;
-    --ink: #14262c; --ink-soft: #4a5c62; --ink-faint: #7c8a8e; --deep: #0b3d4d;
-    --teal: #0e7c86; --lagoon: #2fa9b4; --sand: #e9d9b8; --coral: #ef6a45;
-    --coral-soft: #fdeee7; --shadow: 0 6px 24px rgba(11,61,77,0.10);
-    --shadow-sm: 0 2px 10px rgba(11,61,77,0.07); --chip-bg: #e6f2f2; --chip-ink: #0b5560;
+    --ground: #fbf8f2; --surface: #ffffff; --surface-2: #f3eee2; --border: #d9cfba;
+    --ink: #161616; --ink-soft: #2b2b2b; --ink-label: #3d4a4e; --deep: #0a3946;
+    --teal: #0b6570; --teal-strong: #095059; --lagoon: #157f8a; --coral: #c74a24;
+    --coral-soft: #fbeee7; --shadow: 0 6px 22px rgba(11,61,77,0.12);
+    --shadow-sm: 0 2px 10px rgba(11,61,77,0.10); --chip-bg: #dfeeef; --chip-ink: #084b54;
+    --hero-sun: rgba(199,74,36,0.5);
   }
   :root[data-theme="dark"] {
-    --ground: #071d24; --surface: #0e2c35; --surface-2: #0a252d; --border: #1c4450;
-    --ink: #e7f1f0; --ink-soft: #a9c2c4; --ink-faint: #7fa0a3; --deep: #061922;
-    --teal: #2ba1ab; --lagoon: #47c3ce; --sand: #d9c398; --coral: #ff835f;
-    --coral-soft: #2a2019; --shadow: 0 8px 30px rgba(0,0,0,0.45);
-    --shadow-sm: 0 2px 12px rgba(0,0,0,0.35); --chip-bg: #123840; --chip-ink: #7fd6df;
+    --ground: #08222a; --surface: #0f313b; --surface-2: #0b2932; --border: #2a5764;
+    --ink: #f4faf9; --ink-soft: #dbeae9; --ink-label: #b9d4d6; --deep: #061922;
+    --teal: #4fc3cd; --teal-strong: #6dd4dd; --lagoon: #5fcfd9; --coral: #ff8a63;
+    --coral-soft: #33241c; --shadow: 0 8px 30px rgba(0,0,0,0.5);
+    --shadow-sm: 0 2px 12px rgba(0,0,0,0.4); --chip-bg: #123840; --chip-ink: #a6ecf3;
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { font-size: 20px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     * { animation: none !important; transition: none !important; }
@@ -73,11 +80,12 @@
     margin: 0;
     background: var(--ground);
     color: var(--ink);
-    font-family: "PingFang HK", "PingFang TC", "Hiragino Sans", "Noto Sans HK",
-                 "Microsoft JhengHei", "Heiti TC", system-ui, -apple-system, sans-serif;
-    line-height: 1.72;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "PingFang TC",
+                 "Hiragino Sans", "Microsoft JhengHei", "Heiti TC",
+                 "Noto Sans TC", "Noto Sans HK", system-ui, sans-serif;
+    line-height: 1.8;
     -webkit-font-smoothing: antialiased;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
@@ -88,53 +96,47 @@
     overflow: hidden;
     color: #fff;
     background:
-      radial-gradient(120% 90% at 82% -10%, var(--hero-sun) 0%, rgba(239,106,69,0) 42%),
+      radial-gradient(120% 90% at 82% -10%, var(--hero-sun) 0%, rgba(199,74,36,0) 42%),
       linear-gradient(165deg, var(--hero-1) 0%, var(--hero-2) 52%, var(--hero-3) 100%);
-    padding: 64px 20px 92px;
+    padding: 56px 22px 84px;
     text-align: center;
   }
-  .hero::after {
-    content: "";
-    position: absolute; left: 0; right: 0; bottom: -2px; height: 60px;
-    background:
-      radial-gradient(50% 130% at 50% 0%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0) 70%);
-  }
   .waves { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 46px; display: block; }
-  .hero-inner { position: relative; z-index: 2; max-width: 620px; margin: 0 auto; }
+  .hero-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
   .eyebrow {
     display: inline-block;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.85);
-    background: rgba(255,255,255,0.13);
-    border: 1px solid rgba(255,255,255,0.25);
-    padding: 6px 14px;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 18px;
     border-radius: 999px;
   }
   .hero h1 {
-    font-size: clamp(2.3rem, 8vw, 3.4rem);
-    line-height: 1.12;
-    margin: 20px 0 10px;
+    font-size: clamp(2.3rem, 8vw, 3.1rem);
+    line-height: 1.18;
+    margin: 22px 0 14px;
     font-weight: 800;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     text-wrap: balance;
-    text-shadow: 0 2px 18px rgba(0,0,0,0.22);
+    text-shadow: 0 2px 16px rgba(0,0,0,0.28);
   }
   .hero .meta {
-    font-size: clamp(1rem, 3.6vw, 1.18rem);
-    font-weight: 600;
+    font-size: clamp(1.15rem, 3.6vw, 1.35rem);
+    font-weight: 700;
     color: #fff;
-    opacity: 0.96;
-    margin: 0 0 14px;
+    margin: 0 0 18px;
+    line-height: 1.6;
   }
   .hero .meta span { white-space: nowrap; }
-  .hero .dot { opacity: 0.55; margin: 0 8px; }
+  .hero .dot { opacity: 0.6; margin: 0 8px; }
   .hero .summary {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.9);
-    max-width: 460px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #ffffff;
+    max-width: 520px;
     margin: 0 auto;
     text-wrap: pretty;
   }
@@ -142,171 +144,181 @@
   /* ---------- Sticky nav ---------- */
   nav.tabs {
     position: sticky; top: 0; z-index: 20;
-    background: color-mix(in srgb, var(--ground) 88%, transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
+    background: var(--ground);
+    border-bottom: 2px solid var(--border);
   }
   nav.tabs .row {
-    display: flex; gap: 4px; overflow-x: auto; max-width: var(--maxw);
-    margin: 0 auto; padding: 10px 12px;
+    display: flex; gap: 8px; overflow-x: auto; max-width: var(--maxw);
+    margin: 0 auto; padding: 10px 14px;
     scrollbar-width: none;
   }
   nav.tabs .row::-webkit-scrollbar { display: none; }
   nav.tabs a {
     flex: 0 0 auto;
+    display: inline-flex; align-items: center;
+    min-height: 48px;
     text-decoration: none;
-    color: var(--ink-soft);
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 7px 13px;
+    color: var(--chip-ink);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 8px 20px;
     border-radius: 999px;
+    border: 2px solid var(--border);
+    background: var(--surface);
     white-space: nowrap;
-    transition: background 0.15s, color 0.15s;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
   }
-  nav.tabs a:hover, nav.tabs a:focus-visible { background: var(--chip-bg); color: var(--chip-ink); }
+  nav.tabs a:hover, nav.tabs a:focus-visible {
+    background: var(--chip-bg); border-color: var(--teal); color: var(--chip-ink);
+  }
 
   /* ---------- Sections ---------- */
-  section { padding: 44px 0 8px; scroll-margin-top: 64px; }
-  .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px; }
-  .sec-head .ico { font-size: 1.4rem; line-height: 1; }
+  section { padding: 48px 0 10px; scroll-margin-top: 76px; }
+  section + section { border-top: 2px solid var(--border); }
+  .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .sec-head .ico { font-size: 2rem; line-height: 1; }
   .sec-head h2 {
-    font-size: clamp(1.4rem, 5vw, 1.75rem);
+    font-size: clamp(1.7rem, 5vw, 2rem);
     margin: 0; font-weight: 800; letter-spacing: 0.01em; color: var(--ink);
-    text-wrap: balance;
+    line-height: 1.3; text-wrap: balance;
   }
+  .lead { margin: -8px 0 22px; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.75; }
 
   /* ---------- Quick facts ---------- */
-  .facts {
-    display: grid; gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
+  .facts { display: flex; flex-direction: column; gap: 14px; }
   .fact {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 16px 16px 14px; box-shadow: var(--shadow-sm);
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+    background: var(--surface); border: 2px solid var(--border);
+    border-radius: 16px; padding: 18px 22px; box-shadow: var(--shadow-sm);
   }
   .fact .k {
-    font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--ink-faint); font-weight: 700; display: block; margin-bottom: 4px;
+    flex: 0 0 auto; min-width: 96px;
+    font-size: 1rem; letter-spacing: 0.04em;
+    color: var(--ink-label); font-weight: 800;
   }
-  .fact .v { font-size: 1.06rem; font-weight: 700; color: var(--ink); }
-  .fact .v small { display: block; font-weight: 500; font-size: 0.85rem; color: var(--ink-soft); margin-top: 2px; }
+  .fact .v { flex: 1; min-width: 180px; font-size: 1.2rem; font-weight: 800; color: var(--ink); }
+  .fact .v small { display: block; font-weight: 600; font-size: 0.95rem; color: var(--ink-soft); margin-top: 2px; }
 
   /* ---------- Timeline ---------- */
-  .timeline { display: flex; flex-direction: column; gap: 18px; }
+  .timeline { display: flex; flex-direction: column; gap: 24px; }
   .day {
     position: relative;
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     overflow: hidden;
   }
   .day-head {
-    display: flex; align-items: center; gap: 14px;
-    padding: 16px 18px;
-    background: linear-gradient(100deg, var(--teal), var(--lagoon));
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 18px 20px;
+    background: linear-gradient(100deg, var(--teal-strong), var(--lagoon));
     color: #fff;
   }
   .day-num {
     flex: 0 0 auto;
-    width: 46px; height: 46px; border-radius: 12px;
-    background: rgba(255,255,255,0.18);
-    border: 1px solid rgba(255,255,255,0.3);
+    width: 54px; height: 54px; border-radius: 14px;
+    background: rgba(255,255,255,0.22);
+    border: 2px solid rgba(255,255,255,0.45);
     display: grid; place-items: center;
-    font-weight: 800; font-size: 1.15rem;
+    font-weight: 800; font-size: 1.4rem;
   }
-  .day-head .dh-t { font-weight: 800; font-size: 1.08rem; }
-  .day-head .dh-s { font-size: 0.85rem; opacity: 0.92; font-weight: 600; }
-  .day.sea .day-head { background: linear-gradient(100deg, var(--deep), var(--teal)); }
+  .day-head .dh-t { font-weight: 800; font-size: 1.3rem; line-height: 1.35; }
+  .day-head .dh-s { font-size: 1rem; opacity: 0.97; font-weight: 600; line-height: 1.5; }
+  .day.sea .day-head { background: linear-gradient(100deg, var(--deep), var(--teal-strong)); }
   .badge-sea {
     margin-left: auto; flex: 0 0 auto;
-    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em;
+    font-size: 1rem; font-weight: 800; letter-spacing: 0.04em;
     background: var(--coral); color: #fff;
-    padding: 5px 11px; border-radius: 999px;
+    padding: 8px 16px; border-radius: 999px;
     white-space: nowrap;
   }
-  .steps { list-style: none; margin: 0; padding: 14px 18px 18px; }
+  .steps { list-style: none; margin: 0; padding: 8px 20px 20px; }
   .steps li {
-    display: flex; gap: 14px; padding: 9px 0;
-    border-bottom: 1px dashed var(--border);
+    display: flex; gap: 18px; padding: 16px 0;
+    border-bottom: 2px dashed var(--border);
+    font-size: 1.08rem; line-height: 1.7;
   }
   .steps li:last-child { border-bottom: 0; }
   .steps .t {
-    flex: 0 0 62px; font-weight: 800; color: var(--teal);
-    font-variant-numeric: tabular-nums; font-size: 0.95rem; padding-top: 1px;
+    flex: 0 0 74px; font-weight: 800; color: var(--teal);
+    font-variant-numeric: tabular-nums; font-size: 1.08rem;
   }
   .steps .d { flex: 1; color: var(--ink); }
-  .steps .d b { color: var(--ink); }
-  .steps.plain .t { flex: 0 0 auto; color: var(--coral); font-size: 1.05rem; padding-top: 0; }
+  .steps .d b { color: var(--ink); font-weight: 800; }
 
   /* ---------- Cards ---------- */
-  .cards { display: grid; gap: 14px; grid-template-columns: 1fr; }
-  @media (min-width: 620px) { .cards { grid-template-columns: 1fr 1fr; } }
+  .cards { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  @media (min-width: 680px) { .cards { grid-template-columns: 1fr 1fr; } }
   .card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-sm);
-    display: flex; flex-direction: column; gap: 8px;
+    background: var(--surface); border: 2px solid var(--border);
+    border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: 12px;
   }
-  .card.feat { border-color: var(--coral); box-shadow: 0 0 0 1px var(--coral) inset, var(--shadow-sm); }
-  .card .ct { font-weight: 800; font-size: 1.08rem; color: var(--ink); line-height: 1.4; }
-  .card .cs { font-size: 0.82rem; color: var(--ink-faint); font-weight: 600; margin-top: -4px; }
-  .card p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+  .card.feat { border-color: var(--coral); box-shadow: 0 0 0 2px var(--coral) inset, var(--shadow-sm); }
+  .card .ct { font-weight: 800; font-size: 1.25rem; color: var(--ink); line-height: 1.4; }
+  .card .cs { font-size: 1rem; color: var(--ink-label); font-weight: 700; margin-top: -6px; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.75; }
+  .card .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto; padding-top: 4px; }
   .card .link {
-    margin-top: auto; align-self: flex-start;
-    text-decoration: none; font-weight: 700; font-size: 0.9rem;
-    color: var(--teal);
-    padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border);
-    background: var(--surface-2);
+    display: inline-flex; align-items: center; min-height: 48px;
+    text-decoration: none; font-weight: 800; font-size: 1.05rem;
+    color: #fff; background: var(--teal);
+    padding: 10px 22px; border-radius: 12px; border: 2px solid var(--teal);
     transition: background 0.15s, border-color 0.15s;
   }
-  .card .link:hover, .card .link:focus-visible { background: var(--chip-bg); border-color: var(--teal); color: var(--chip-ink); }
+  .card .link:hover, .card .link:focus-visible { background: var(--teal-strong); border-color: var(--teal-strong); }
   .card .link[aria-disabled="true"] {
-    pointer-events: none; color: var(--ink-faint); background: transparent; border-style: dashed;
+    pointer-events: none; color: var(--ink-label); background: var(--surface-2);
+    border-color: var(--border); border-style: dashed; font-weight: 700;
   }
   .card.wide { grid-column: 1 / -1; }
 
   /* tags */
-  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; }
   .tag {
-    font-size: 0.82rem; font-weight: 700; color: var(--chip-ink);
-    background: var(--chip-bg); padding: 6px 12px; border-radius: 999px;
+    font-size: 0.95rem; font-weight: 700; color: var(--chip-ink);
+    background: var(--chip-bg); padding: 8px 15px; border-radius: 999px;
+    border: 1px solid var(--border);
   }
-  .tag.coral { color: #fff; background: var(--coral); }
+  .tag.coral { color: #fff; background: var(--coral); border-color: var(--coral); }
 
   /* note box */
   .note {
-    display: flex; gap: 10px; align-items: flex-start;
-    background: var(--coral-soft); border: 1px solid var(--border);
-    border-left: 4px solid var(--coral);
-    border-radius: 12px; padding: 13px 15px; margin-top: 16px;
-    font-size: 0.92rem; color: var(--ink-soft);
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--coral-soft); border: 2px solid var(--border);
+    border-left: 6px solid var(--coral);
+    border-radius: 14px; padding: 18px 20px; margin-top: 22px;
+    font-size: 1.05rem; line-height: 1.75; color: var(--ink-soft);
   }
-  .note .ni { flex: 0 0 auto; font-size: 1.05rem; }
+  .note .ni { flex: 0 0 auto; font-size: 1.4rem; }
 
   /* tips */
-  .tips { display: flex; flex-direction: column; gap: 12px; }
+  .tips { display: flex; flex-direction: column; gap: 18px; }
   .tip {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 15px 17px; box-shadow: var(--shadow-sm);
+    background: var(--surface); border: 2px solid var(--border);
+    border-radius: 16px; padding: 20px 22px; box-shadow: var(--shadow-sm);
   }
-  .tip .th { font-weight: 800; color: var(--ink); margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
-  .tip ul { margin: 0; padding-left: 1.15em; color: var(--ink-soft); }
-  .tip li { margin: 4px 0; }
+  .tip .th { font-weight: 800; font-size: 1.2rem; color: var(--ink); margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
+  .tip ul { margin: 0; padding-left: 1.3em; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; }
+  .tip li { margin: 8px 0; }
 
   a { color: var(--teal); }
-  :focus-visible { outline: 3px solid var(--lagoon); outline-offset: 2px; border-radius: 6px; }
+  :focus-visible { outline: 4px solid var(--lagoon); outline-offset: 3px; border-radius: 8px; }
 
   footer {
-    margin-top: 40px;
-    border-top: 1px solid var(--border);
-    padding: 26px 20px 40px;
+    margin-top: 48px;
+    border-top: 2px solid var(--border);
+    padding: 30px 22px 46px;
     text-align: center;
-    color: var(--ink-faint);
-    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    line-height: 1.7;
   }
-  footer .sun { color: var(--coral); font-size: 1.2rem; display: block; margin-bottom: 8px; }
+  footer .sun { color: var(--coral); font-size: 1.6rem; display: block; margin-bottom: 10px; }
 </style>
+</head>
+<body>
 
 <header class="hero">
   <div class="hero-inner">
@@ -423,7 +435,7 @@
   <!-- Stay -->
   <section id="stay">
     <div class="sec-head"><span class="ico">🏨</span><h2>住宿建議</h2></div>
-    <p style="margin:-8px 0 18px;color:var(--ink-soft);font-size:0.95rem;">9人、兩架車、要泊車位。以下幾個方向揀啱自己隊型：</p>
+    <p class="lead">9人、兩架車、要泊車位。以下幾個方向揀啱自己隊型：</p>
     <div class="cards">
 
       <div class="card feat">
@@ -431,7 +443,9 @@
         <div class="cs">北谷 · 大酒店</div>
         <p>訂 4–5 間房，免費泊車，行得到美國村同碼頭，最方便穩陣。</p>
         <div class="tags"><span class="tag">免費泊車</span><span class="tag">近美國村</span></div>
-        <a class="link" href="https://www.hilton.com/en/hotels/okahihi-hilton-okinawa-chatan-resort/" target="_blank" rel="noopener">睇酒店 →</a>
+        <div class="links">
+          <a class="link" href="https://www.hilton.com/en/hotels/okahihi-hilton-okinawa-chatan-resort/" target="_blank" rel="noopener">睇酒店 →</a>
+        </div>
       </div>
 
       <div class="card">
@@ -439,8 +453,10 @@
         <div class="cs">Airbnb / Vrbo · 一屋住晒</div>
         <p>有廚房、免費泊車（部分泊到兩架車），一屋住晒9人，出海前一齊食早餐超方便。</p>
         <div class="tags"><span class="tag">有廚房</span><span class="tag">一屋9人</span></div>
-        <a class="link" href="https://www.airbnb.com/chatan-nakagami-district-japan/stays" target="_blank" rel="noopener">Airbnb →</a>
-        <a class="link" href="https://www.vrbo.com/vacation-rentals/japan/okinawa-prefecture/chatan" target="_blank" rel="noopener" style="margin-top:0;">Vrbo →</a>
+        <div class="links">
+          <a class="link" href="https://www.airbnb.com/chatan-nakagami-district-japan/stays" target="_blank" rel="noopener">Airbnb →</a>
+          <a class="link" href="https://www.vrbo.com/vacation-rentals/japan/okinawa-prefecture/chatan" target="_blank" rel="noopener">Vrbo →</a>
+        </div>
       </div>
 
       <div class="card">
@@ -448,7 +464,9 @@
         <div class="cs">恩納 · 私人泳池 Villa</div>
         <p>可住12人、私人泳池、BBQ、免費泊車，夠晒爽。不過離碼頭遠啲，配7:00開船辛苦少少。</p>
         <div class="tags"><span class="tag">私人泳池</span><span class="tag">BBQ</span><span class="tag coral">離碼頭遠</span></div>
-        <a class="link" href="https://www.booking.com/hotel/jp/grandioso-okinawa-pool-villa-onna-9-vacation-stay-90315v.html" target="_blank" rel="noopener">睇Villa →</a>
+        <div class="links">
+          <a class="link" href="https://www.booking.com/hotel/jp/grandioso-okinawa-pool-villa-onna-9-vacation-stay-90315v.html" target="_blank" rel="noopener">睇Villa →</a>
+        </div>
       </div>
 
       <div class="card">
@@ -456,7 +474,9 @@
         <div class="cs">Rihga Royal Gran / Tokyu Stay Naha</div>
         <p>若釣魚船改喺那霸出發，可考慮呢兩間。市區泊車多數收費，要確認泊到兩架車位。</p>
         <div class="tags"><span class="tag">市區</span><span class="tag coral">泊車要確認</span></div>
-        <a class="link" aria-disabled="true">船改那霸先考慮</a>
+        <div class="links">
+          <a class="link" aria-disabled="true">船改那霸先考慮</a>
+        </div>
       </div>
 
     </div>
@@ -476,7 +496,9 @@
         <div class="cs">那霸 牧志／美榮橋</div>
         <p>幫你煮返自己親手釣嘅魚 🐟，約 6円／克。一定要預先講定條數同時間！</p>
         <div class="tags"><span class="tag coral">代煮魚穫</span><span class="tag">要預約</span></div>
-        <a class="link" href="https://tsurikitchen.com/detail/19" target="_blank" rel="noopener">睇詳情 →</a>
+        <div class="links">
+          <a class="link" href="https://tsurikitchen.com/detail/19" target="_blank" rel="noopener">睇詳情 →</a>
+        </div>
       </div>
 
       <div class="card">
@@ -484,7 +506,9 @@
         <div class="cs">國際通／恩納</div>
         <p>沖繩料理，有三線現場 live，夠熱鬧，啱大團 high。</p>
         <div class="tags"><span class="tag">三線 live</span><span class="tag">啱大團</span></div>
-        <a class="link" href="https://www.chinuman.com/" target="_blank" rel="noopener">官網 →</a>
+        <div class="links">
+          <a class="link" href="https://www.chinuman.com/" target="_blank" rel="noopener">官網 →</a>
+        </div>
       </div>
 
       <div class="card">
@@ -492,7 +516,9 @@
         <div class="cs">北谷</div>
         <p>串燒放題＋飲放題，抵食夠飽，第一晚落腳首選 🍢。</p>
         <div class="tags"><span class="tag">放題</span><span class="tag">飲放題</span></div>
-        <a class="link" aria-disabled="true">現場／電話訂位</a>
+        <div class="links">
+          <a class="link" aria-disabled="true">現場／電話訂位</a>
+        </div>
       </div>
 
       <div class="card">
@@ -500,7 +526,9 @@
         <div class="cs">恩納</div>
         <p>全私人榻榻米房，9人坐得舒服，傾偈慶功一流。</p>
         <div class="tags"><span class="tag">私人房</span><span class="tag">榻榻米</span></div>
-        <a class="link" aria-disabled="true">建議訂私人房</a>
+        <div class="links">
+          <a class="link" aria-disabled="true">建議訂私人房</a>
+        </div>
       </div>
 
       <div class="card">
@@ -508,7 +536,9 @@
         <div class="cs">北谷</div>
         <p>海鮮／刺身。Pier 54 仲可以幫手煮魚穫兼睇日落，一舉兩得 🌅。</p>
         <div class="tags"><span class="tag">海鮮刺身</span><span class="tag">睇日落</span></div>
-        <a class="link" aria-disabled="true">現場／電話訂位</a>
+        <div class="links">
+          <a class="link" aria-disabled="true">現場／電話訂位</a>
+        </div>
       </div>
 
       <div class="card">
@@ -561,3 +591,6 @@
   <span class="sun">🌺</span>
   行程由 Claude 整理 · 資料僅供參考，落訂前請向店家確認
 </footer>
+
+</body>
+</html>
