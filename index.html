@@ -319,6 +319,15 @@
   .flight-row .fl-best {
     flex: 1 1 100%; color: var(--coral); font-weight: 800; font-size: 1.05rem;
   }
+  .flight-row .fl-stat {
+    flex: 1 1 100%; font-weight: 800; font-size: 1.02rem; line-height: 1.6;
+    color: var(--coral);
+  }
+  .flight-row .fl-stat.ok { color: var(--teal); }
+  .flight-row .fl-note {
+    flex: 1 1 100%; color: var(--ink-soft); font-weight: 600; font-size: 0.98rem;
+    line-height: 1.6;
+  }
   .price-line {
     display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
     background: var(--surface-2); border: 2px solid var(--border);
@@ -391,8 +400,8 @@
   <section id="flights">
     <div class="sec-head"><span class="ico">✈️</span><h2>機票</h2></div>
     <div class="note">
-      <span class="ni">ℹ️</span>
-      <span>以下係直航班次同時間（可靠），票價係參考，實價請撳連結睇當下report。9人可能當團體票，可搵航空公司團體枱。廉航（HK Express／大灣區）唔包寄艙，釣魚竿要另外預訂運動器材。</span>
+      <span class="ni">⚠️</span>
+      <span>以下班次時間係第三方 timetable 資料，未能同航空公司官網核實，而且暑期班表可能同淡季唔同。落訂前請喺航空公司官網確認：<b>hkexpress.com</b>、<b>hongkongairlines.com</b>、<b>greaterbay-airlines.com</b>。時間一律當地機場時間（香港起飛＝香港時間；那霸起飛＝日本時間，日本快香港1個鐘）。</span>
     </div>
     <div class="cards" style="margin-top:22px;">
 
@@ -402,18 +411,19 @@
         <div class="flights-list">
           <div class="flight-row">
             <div class="fl-air">HK Express UO820</div>
-            <span class="fl-time">07:30 → 10:55</span>
-            <span class="fl-dur">約 2h25m</span>
+            <span class="fl-time">約 07:00(港) → 10:40(日本)</span>
+            <span class="fl-note">我哋原先寫嘅 07:30 → 10:55 似係冬季班；以官網為準</span>
+            <span class="fl-stat">⚠️ 狀態：時間待 confirm</span>
           </div>
           <div class="flight-row">
             <div class="fl-air">Hong Kong Airlines HX676</div>
-            <span class="fl-time">07:25 → 11:00</span>
-            <span class="fl-dur">約 2h35m</span>
+            <span class="fl-time">07:25(港) → 11:00(日本)</span>
+            <span class="fl-stat">⚠️ 狀態：可能逢二唔飛，要查</span>
           </div>
           <div class="flight-row">
             <div class="fl-air">大灣區航空 Greater Bay HB336（逢二）</div>
-            <span class="fl-time">08:20 → 12:00</span>
-            <span class="fl-dur">約 2h40m</span>
+            <span class="fl-time">08:20(港) → 12:00(日本)</span>
+            <span class="fl-stat ok">✅ 狀態：較可靠（仍以官網為準）</span>
           </div>
         </div>
       </div>
@@ -424,18 +434,18 @@
         <div class="flights-list">
           <div class="flight-row">
             <div class="fl-air">HK Express UO821</div>
-            <span class="fl-time">11:55 → 13:55</span>
-            <span class="fl-best">✅ 最啱中午</span>
+            <span class="fl-time">11:55(日本) → 13:55(港)</span>
+            <span class="fl-stat">⚠️ 狀態：夏季時間未確認，要查</span>
           </div>
           <div class="flight-row">
-            <div class="fl-air">Hong Kong Airlines HX679</div>
-            <span class="fl-time">13:55 → 15:50</span>
-            <span class="fl-dur">下午</span>
+            <div class="fl-air">Hong Kong Airlines HX679（逢五）</div>
+            <span class="fl-time">13:55(日本) → 15:50(港)</span>
+            <span class="fl-stat ok">✅ 狀態：較可靠（仍以官網為準）</span>
           </div>
           <div class="flight-row">
             <div class="fl-air">大灣區航空 Greater Bay HB337（逢五）</div>
-            <span class="fl-time">15:40 → 17:25</span>
-            <span class="fl-dur">下午</span>
+            <span class="fl-time">15:40(日本) → 17:25(港)</span>
+            <span class="fl-stat">⚠️ 狀態：資料矛盾，要查</span>
           </div>
         </div>
       </div>
@@ -444,7 +454,7 @@
 
     <div class="note">
       <span class="ni">👍</span>
-      <span>最就時間：去程 <b>UO820</b> ＋ 回程 <b>UO821</b>（同一間 HK Express，早出中午返，9人最易 order）。</span>
+      <span>最就時間仍係 去 <b>UO820</b>＋回 <b>UO821</b>（同一間 HK Express），但兩班嘅暑期時間都要喺官網 confirm。想穩陣可考慮 <b>HB336</b>(去)＋<b>HX679</b>(回)，呢兩班較有把握。</span>
     </div>
 
     <div class="price-line">
