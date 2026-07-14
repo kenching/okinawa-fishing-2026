@@ -340,6 +340,65 @@
     padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border);
   }
 
+  /* ---------- Hotel (single chosen) ---------- */
+  .hotel-hero {
+    background: var(--surface); border: 2px solid var(--coral);
+    box-shadow: 0 0 0 2px var(--coral) inset, var(--shadow-sm);
+    border-radius: var(--radius); padding: 24px 22px; margin-bottom: 22px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .hotel-hero .hh-name { font-weight: 800; font-size: 1.5rem; color: var(--ink); line-height: 1.35; }
+  .hotel-hero .hh-en { font-size: 1.02rem; color: var(--ink-label); font-weight: 700; margin-top: -8px; }
+  .hotel-hero .hh-score {
+    display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-weight: 800; font-size: 1.1rem; color: var(--ink);
+  }
+  .hotel-hero .hh-badge {
+    font-size: 1.1rem; font-weight: 800; color: #fff; background: var(--teal);
+    padding: 6px 14px; border-radius: 12px;
+  }
+  .hotel-hero .hh-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .hotel-hero .hh-list li { display: flex; gap: 12px; font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft); }
+  .hotel-hero .hh-list li .hi { flex: 0 0 auto; font-size: 1.15rem; }
+  .hotel-hero .hh-list li b { color: var(--ink); font-weight: 800; }
+  .hotel-hero .links { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hotel-hero .link {
+    display: inline-flex; align-items: center; min-height: 54px;
+    text-decoration: none; font-weight: 800; font-size: 1.12rem;
+    color: #fff; background: var(--coral);
+    padding: 12px 26px; border-radius: 12px; border: 2px solid var(--coral);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .hotel-hero .link:hover, .hotel-hero .link:focus-visible { background: #a83c1c; border-color: #a83c1c; }
+
+  .rooms-head { font-weight: 800; font-size: 1.2rem; color: var(--ink); margin: 4px 0 14px; }
+  .room {
+    background: var(--surface); border: 2px solid var(--border);
+    border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .room .r-name {
+    font-weight: 800; font-size: 1.3rem; color: var(--ink); line-height: 1.35;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .room .r-num {
+    flex: 0 0 auto; width: 38px; height: 38px; border-radius: 10px;
+    background: var(--chip-bg); color: var(--chip-ink);
+    display: grid; place-items: center; font-size: 1.15rem; font-weight: 800;
+  }
+  .room .r-spec { font-size: 1.02rem; color: var(--ink-soft); line-height: 1.7; font-weight: 600; }
+  .room .r-nightly { font-size: 1.08rem; font-weight: 700; color: var(--ink-soft); }
+  .room .r-nightly b { color: var(--ink); font-weight: 800; }
+  .room .r-total {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    background: var(--surface-2); border: 2px solid var(--border);
+    border-radius: 14px; padding: 16px 20px;
+  }
+  .room .r-total .rt-k { font-size: 1rem; font-weight: 800; color: var(--ink-label); }
+  .room .r-total .rt-v { font-size: 1.7rem; font-weight: 800; color: var(--coral); font-variant-numeric: tabular-nums; }
+  .room .r-total .rt-x { font-size: 0.95rem; font-weight: 600; color: var(--ink-soft); }
+  .room .r-fine { font-size: 0.95rem; color: var(--ink-soft); font-weight: 600; line-height: 1.65; }
+
   a { color: var(--teal); }
   :focus-visible { outline: 4px solid var(--lagoon); outline-offset: 3px; border-radius: 8px; }
 
@@ -364,7 +423,7 @@
     <p class="meta">
       <span>7月28–31日</span><span class="dot">·</span><span>4日3夜</span><span class="dot">·</span><span>9人自駕</span>
     </p>
-    <p class="summary">兩架七人車自駕，落腳北谷 Chatan／美國村，7/29 同 7/30 全日出海釣魚，晚晚食返自己釣嘅魚穫 🐟🍶</p>
+    <p class="summary">兩架七人車自駕，落腳瀨長島（那霸機場旁），7/29 同 7/30 全日出海釣魚，晚晚泡溫泉、食返自己釣嘅魚穫 🐟♨️🍶</p>
   </div>
   <svg class="waves" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 24 C 180 4, 300 44, 480 30 C 660 16, 780 46, 960 32 C 1140 18, 1260 44, 1440 26 L1440 46 L0 46 Z" fill="var(--ground)"/>
@@ -391,7 +450,7 @@
       <div class="fact"><span class="k">日期</span><span class="v">7月28–31日<small>4日3夜（二至五）</small></span></div>
       <div class="fact"><span class="k">人數</span><span class="v">9 人</span></div>
       <div class="fact"><span class="k">交通</span><span class="v">自駕<small>兩架七人車</small></span></div>
-      <div class="fact"><span class="k">大本營</span><span class="v">北谷 Chatan<small>美國村一帶</small></span></div>
+      <div class="fact"><span class="k">大本營</span><span class="v">瀨長島酒店（那霸機場旁）<small>南部・自駕約10分鐘到機場</small></span></div>
       <div class="fact"><span class="k">出海日</span><span class="v">7/29 &amp; 7/30<small>7:00–17:00 全日</small></span></div>
     </div>
   </section>
@@ -451,14 +510,14 @@
           <div class="day-num">1</div>
           <div>
             <div class="dh-t">7/28（二）· 抵達</div>
-            <div class="dh-s">那霸落機 → 入住北谷 → 美國村行街</div>
+            <div class="dh-s">那霸落機 → 入住瀨長島 → 泡溫泉睇日落</div>
           </div>
         </div>
         <ul class="steps">
           <li><span class="t">12:50</span><span class="d">HX676 到 <b>那霸機場</b>，攞車（兩架七人車），check 好裝備行李</span></li>
-          <li><span class="t">約40分</span><span class="d">揸去 <b>北谷 Chatan</b> 入住，放低行李</span></li>
-          <li><span class="t">下午</span><span class="d">行 <b>美國村</b>、行埋 <b>日落海灘 Sunset Beach</b> 睇日落</span></li>
-          <li><span class="t">晚餐</span><span class="d">くしかど <b>Kushikado</b> 串燒放題＋飲放題，食飽飽準備聽日出海 🍢🍺</span></li>
+          <li><span class="t">約10分</span><span class="d">酒店就喺機場旁，揸去 <b>瀨長島酒店</b> 入住，放低行李</span></li>
+          <li><span class="t">下午</span><span class="d">泡 <b>天然溫泉</b>、行 <b>Umikaji Terrace</b>（海景商店街）、睇日落 🌅</span></li>
+          <li><span class="t">晚餐</span><span class="d">Umikaji Terrace 或酒店附近搵嘢食，食飽飽準備聽日出海 🍢🍺</span></li>
         </ul>
       </article>
 
@@ -467,15 +526,16 @@
           <div class="day-num">2</div>
           <div>
             <div class="dh-t">7/29（三）· 出海一</div>
-            <div class="dh-s">全日出海釣魚 · 晚上入那霸食魚穫</div>
+            <div class="dh-s">全日出海釣魚 · 晚上食魚穫</div>
           </div>
           <span class="badge-sea">🎣 出海日</span>
         </div>
         <ul class="steps">
-          <li><span class="t">6:30</span><span class="d">酒店／便利店食早餐，帶定防曬同暈浪藥</span></li>
+          <li><span class="t">5:45</span><span class="d">酒店食早餐，帶定防曬同暈浪藥（要早起）</span></li>
+          <li><span class="t">出發</span><span class="d">揸去 <b>釣魚碼頭</b>，如中西部港口（讀谷／宜野灣）約 <b>45–60分鐘車程</b>，要早出發</span></li>
           <li><span class="t">7:00</span><span class="d"><b>碼頭集合開船</b> 🚤（船已 book 好）</span></li>
           <li><span class="t">17:00</span><span class="d">埋岸收隊，執好今日魚穫</span></li>
-          <li><span class="t">傍晚</span><span class="d">回酒店沖涼抖抖</span></li>
+          <li><span class="t">傍晚</span><span class="d">返酒店 <b>泡溫泉</b> 鬆返條筋 ♨️</span></li>
           <li><span class="t">晚餐</span><span class="d">揸去那霸 <b>海人居酒屋 一郎屋</b>，煮返今日親手釣嘅魚 🐟（記得預先講定條數同時間）</span></li>
         </ul>
       </article>
@@ -490,10 +550,12 @@
           <span class="badge-sea">🎣 出海日</span>
         </div>
         <ul class="steps">
-          <li><span class="t">6:30</span><span class="d">早餐（同樣流程）</span></li>
+          <li><span class="t">5:45</span><span class="d">早餐（同樣流程，早起出發）</span></li>
+          <li><span class="t">出發</span><span class="d">揸返去 <b>釣魚碼頭</b>（中西部約 45–60分鐘車程）</span></li>
           <li><span class="t">7:00</span><span class="d"><b>碼頭集合開船</b> 🚤</span></li>
           <li><span class="t">17:00</span><span class="d">埋岸，最後一日盡情釣</span></li>
-          <li><span class="t">晚餐</span><span class="d">留喺北谷或恩納 <b>Toto Chanpuru</b> 或 <b>ちぬまん Chinuman</b>，睇三線 live 慶功 🎶🍶</span></li>
+          <li><span class="t">傍晚</span><span class="d">返酒店 <b>泡溫泉</b> ♨️</span></li>
+          <li><span class="t">晚餐</span><span class="d"><b>ちぬまん Chinuman</b> 或 <b>Toto Chanpuru</b>，睇三線 live 慶功 🎶🍶</span></li>
         </ul>
       </article>
 
@@ -502,13 +564,13 @@
           <div class="day-num">4</div>
           <div>
             <div class="dh-t">7/31（五）· 離開</div>
-            <div class="dh-s">早餐 → 還車 → 13:55 起飛返港</div>
+            <div class="dh-s">酒店近機場 → 泡最後一次溫泉 → 13:55 起飛返港</div>
           </div>
         </div>
         <ul class="steps">
-          <li><span class="t">早上</span><span class="d">早餐、執行李（時間較趕，唔好瞓過龍）</span></li>
-          <li><span class="t">還車</span><span class="d">還車 → 大約 <b>11:30 前到那霸機場</b>，留返時間 check-in、託運釣魚裝備</span></li>
-          <li><span class="t">13:55</span><span class="d"><b>HX679 起飛</b>返香港 ✈️（15:50 到 HKG）</span></li>
+          <li><span class="t">早上</span><span class="d">早餐、<b>泡最後一次溫泉</b> ♨️、執行李（酒店近機場，唔使太趕）</span></li>
+          <li><span class="t">還車</span><span class="d">酒店就喺機場隔離，還車 → 到 <b>那霸機場</b> 好方便，留返時間 check-in、託運釣魚裝備</span></li>
+          <li><span class="t">13:55</span><span class="d"><b>HX679 起飛</b>返香港 ✈️（15:50 到 HKG），走得輕鬆</span></li>
         </ul>
       </article>
 
@@ -517,70 +579,71 @@
 
   <!-- Stay -->
   <section id="stay">
-    <div class="sec-head"><span class="ico">🏨</span><h2>住宿建議</h2></div>
-    <p class="lead">9人、兩架車、要泊車位。全部係酒店，以 <b>單人房 × 9（9人9間）</b> 計。房價全部係 <b>參考價</b>（旺季浮動，撳連結睇即時真價）：</p>
+    <div class="sec-head"><span class="ico">🏨</span><h2>住宿</h2></div>
+    <p class="lead">已揀定 <b>琉球溫泉 瀨長島酒店</b>，入住 <b>7/28–7/31（3晚）· 9間房</b>。以下 3 款房型嘅價錢係 trip.com 嘅 <b>實際報價</b>（連稅及附加費）。</p>
+
+    <div class="hotel-hero">
+      <div class="tags"><span class="tag coral">✅ 已揀定</span><span class="tag">★★★★</span><span class="tag">2013 開業</span></div>
+      <div>
+        <div class="hh-name">琉球溫泉 瀨長島酒店</div>
+        <div class="hh-en">Ryukyu Onsen Senagajima Hotel</div>
+      </div>
+      <div class="hh-score">
+        <span class="hh-badge">9.3 / 10</span>
+        <span>「非常好」（482 則評價）· Trip.Best 沖繩縣溫泉酒店第 1 名</span>
+      </div>
+      <ul class="hh-list">
+        <li><span class="hi">📍</span><span>地址：174-5 Senaga, 豐見城市, 沖繩縣（<b>那霸機場旁，自駕約10分鐘</b>）</span></li>
+        <li><span class="hi">♨️</span><span>特色：<b>天然溫泉</b>、日落美景、位置理想</span></li>
+        <li><span class="hi">🚶</span><span>近 瀨長島 <b>Umikaji Terrace</b>（260m）、龍神 (Ryujin) 神社（140m）</span></li>
+        <li><span class="hi">🗓️</span><span>入住 <b>7/28–7/31（3晚）· 9間房</b>；含早餐、即時確認、網上預付、免費取消（<b>7月19日 12:00 前</b>）</span></li>
+      </ul>
+      <div class="links">
+        <a class="link" href="https://us.trip.com/hotels/tomigusuku-hotel-detail-1461829/ryukyu-onsen-senagajima-hotel/?checkIn=2026-07-28&amp;checkOut=2026-07-31&amp;crn=9&amp;adult=9" target="_blank" rel="noopener">trip.com 預訂 / 睇房型 →</a>
+      </div>
+    </div>
+
+    <p class="rooms-head">🛏️ 3 款房型（9間 × 3晚，連稅及附加費）</p>
     <div class="cards">
 
-      <div class="card feat">
-        <div class="ct">琉球溫泉 瀨長島酒店</div>
-        <div class="cs">瀨長島 · Ryukyu Onsen Senagajima Hotel</div>
-        <p>那霸機場旁瀨長島，天然溫泉、可望跑道日落、戶外泳池。<b>單人房 × 9（9人9間）</b>。度假酒店多數賣雙人房，單人入住當9間房計。溫泉靚、近機場，好啱抵埗第一晚或走前一晚住。</p>
-        <div class="tags"><span class="tag">單人房×9</span><span class="tag">天然溫泉</span><span class="tag">近機場</span><span class="tag">戶外泳池</span></div>
-        <div class="price-line">
-          <span class="pl-badge">參考</span>
-          <span>單人房×9，全團3晚（27房晚）約 <b>HK$35,000–63,000</b><br><small>約每房每晚 HK$1,300–2,340・旺季浮動・實價撳連結確認</small></span>
-        </div>
-        <div class="links">
-          <a class="link" href="https://us.trip.com/hotels/tomigusuku-hotel-detail-1461829/ryukyu-onsen-senagajima-hotel/?checkIn=2026-07-28&amp;checkOut=2026-07-31&amp;crn=9&amp;adult=9" target="_blank" rel="noopener">trip.com 預訂 / 睇價 →</a>
+      <div class="room">
+        <div class="r-name"><span class="r-num">1</span>雙人間</div>
+        <div class="r-spec">1張雙人床 · 17平方米 · 3–4樓 · 有窗 · 禁煙 · 免費 Wi-Fi</div>
+        <div class="r-nightly">含 1 位早餐 · 每晚 <b>HK$1,051／房</b></div>
+        <div class="r-total">
+          <span class="rt-k">9間×3晚 總額</span>
+          <span class="rt-v">HK$34,061</span>
+          <span class="rt-x">連稅及附加費</span>
         </div>
       </div>
 
-      <div class="card">
-        <div class="ct">Hilton Okinawa Chatan Resort</div>
-        <div class="cs">北谷 · 美國村旁大酒店</div>
-        <p>北谷美國村旁，免費泊車。<b>單人房 × 9（9人9間）</b>，行得到美國村同碼頭，方便穩陣。</p>
-        <div class="tags"><span class="tag">單人房×9</span><span class="tag">免費泊車</span><span class="tag">近美國村</span></div>
-        <div class="price-line">
-          <span class="pl-badge">參考</span>
-          <span>單人房×9，全團3晚（27房晚）約 <b>HK$63,000–105,000</b><br><small>約每房每晚 HK$2,340–3,900・旺季浮動・實價撳連結確認</small></span>
-        </div>
-        <div class="links">
-          <a class="link" href="https://us.trip.com/hotels/chatan-hotel-detail-1779182/hilton-okinawa-chatan-resort/?checkIn=2026-07-28&amp;checkOut=2026-07-31&amp;crn=9&amp;adult=9" target="_blank" rel="noopener">trip.com 預訂 / 睇價 →</a>
+      <div class="room">
+        <div class="r-name"><span class="r-num">2</span>按司緊湊雙人床房</div>
+        <div class="r-spec">1張雙人床 · 20平方米 · 5樓 · 有窗 · 禁煙 · 免費 Wi-Fi</div>
+        <div class="r-nightly">含 1 位早餐 · 每晚 <b>HK$1,149／房</b></div>
+        <div class="r-total">
+          <span class="rt-k">9間×3晚 總額</span>
+          <span class="rt-v">HK$37,240</span>
+          <span class="rt-x">連稅及附加費</span>
         </div>
       </div>
 
-      <div class="card">
-        <div class="ct">Rihga Royal Gran Okinawa</div>
-        <div class="cs">那霸備選 · 近旭橋單軌</div>
-        <p>近旭橋單軌、離機場約10分鐘。<b>單人房 × 9（9人9間）</b>，市區酒店多數有真單人房，市區交通方便。</p>
-        <div class="tags"><span class="tag">單人房×9</span><span class="tag">市區</span><span class="tag">近單軌</span></div>
-        <div class="price-line">
-          <span class="pl-badge">參考</span>
-          <span>單人房×9，全團3晚（27房晚）約 <b>HK$32,000–53,000</b><br><small>約每房每晚 HK$1,170–1,950・旺季浮動・實價撳連結確認</small></span>
+      <div class="room">
+        <div class="r-name"><span class="r-num">3</span>海景和洋式房帶露天浴缸</div>
+        <div class="r-spec">2張單人床 · 29–31平方米 · 海景 · 禁煙 · 免費 Wi-Fi · 3–5樓</div>
+        <div class="r-nightly">含 2 位早餐（2位成人價） · 每晚 <b>HK$1,850／房</b></div>
+        <div class="r-total">
+          <span class="rt-k">9間×3晚 總額</span>
+          <span class="rt-v">HK$59,947</span>
+          <span class="rt-x">連稅及附加費</span>
         </div>
-        <div class="links">
-          <a class="link" href="https://us.trip.com/hotels/naha-hotel-detail-704046/rihga-royal-gran-okinawa/?checkIn=2026-07-28&amp;checkOut=2026-07-31&amp;crn=9&amp;adult=9" target="_blank" rel="noopener">trip.com 預訂 / 睇價 →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="ct">Tokyu Stay Okinawa Naha</div>
-        <div class="cs">那霸備選 · 房內廚房洗衣機</div>
-        <p>房內有廚房、洗衣機，長住實用。泊車約 HK$80／日。<b>單人房 × 9（9人9間）</b>。</p>
-        <div class="tags"><span class="tag">單人房×9</span><span class="tag">房內廚房</span><span class="tag">洗衣機</span><span class="tag coral">泊車收費</span></div>
-        <div class="price-line">
-          <span class="pl-badge">參考</span>
-          <span>單人房×9，全團3晚（27房晚）約 <b>HK$25,000–38,000</b><br><small>約每房每晚 HK$940–1,400・旺季浮動・實價撳連結確認</small></span>
-        </div>
-        <div class="links">
-          <a class="link" href="https://us.trip.com/hotels/naha-hotel-detail-45987505/tokyu-stay-okinawa-naha/?checkIn=2026-07-28&amp;checkOut=2026-07-31&amp;crn=9&amp;adult=9" target="_blank" rel="noopener">trip.com 預訂 / 睇價 →</a>
-        </div>
+        <div class="r-fine">呢款係雙床房（可住 2 人／房），如果部分人夾房可以慳返，實際房數以你落訂為準。</div>
       </div>
 
     </div>
     <div class="note">
-      <span class="ni">⚠️</span>
-      <span>所有房價都係參考（旺季浮動），我哋暫時喺後台攞唔到即時實價，連結會開去 trip.com／官網睇當下真價同確認 — 撳一下最準。日本酒店以單人房×9計。</span>
+      <span class="ni">💡</span>
+      <span>價錢／房量有限，以 trip.com 落訂頁為準。</span>
     </div>
   </section>
 
@@ -663,6 +726,14 @@
           <li>兩日最好搭同一間船（碼頭固定，唔使周圍走）</li>
           <li>帶定防曬、暈浪藥、太陽眼鏡、換洗衫</li>
           <li>早餐可以喺酒店／便利店買定，7:00開船趕時間</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <p class="th">♨️ 大本營・瀨長島</p>
+        <ul>
+          <li>瀨長島喺南部近機場，如果釣魚船喺中西部（讀谷／宜野灣）出發，每朝去碼頭約 45–60 分鐘，記得早起</li>
+          <li>走前一日因為酒店近機場，會好方便，唔使趕</li>
+          <li>放工返到酒店可以泡溫泉鬆返，附近有 Umikaji Terrace 行下食下</li>
         </ul>
       </div>
       <div class="tip">
