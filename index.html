@@ -401,6 +401,30 @@
   .room .r-total .rt-x { font-size: 0.95rem; font-weight: 600; color: var(--ink-soft); }
   .room .r-fine { font-size: 0.95rem; color: var(--ink-soft); font-weight: 600; line-height: 1.65; }
 
+  .r-opts { display: flex; flex-direction: column; gap: 14px; }
+  .r-opt {
+    background: var(--surface-2); border: 2px solid var(--border);
+    border-radius: 14px; padding: 16px 18px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .r-opt .ro-k { font-size: 1rem; font-weight: 800; color: var(--ink-label); line-height: 1.5; }
+  .r-opt .ro-price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .r-opt .ro-v {
+    font-size: 2rem; font-weight: 800; color: var(--coral);
+    font-variant-numeric: tabular-nums; line-height: 1.2;
+  }
+  .r-opt .ro-unit { font-size: 1rem; font-weight: 800; color: var(--ink); }
+  .r-opt .ro-was { font-size: 0.95rem; font-weight: 700; color: var(--ink-soft); }
+  .r-opt .ro-off {
+    font-size: 0.9rem; font-weight: 800; color: #fff; background: var(--coral);
+    padding: 3px 11px; border-radius: 999px; white-space: nowrap;
+  }
+  .r-opt .ro-total {
+    font-size: 1rem; font-weight: 700; color: var(--ink-soft);
+    line-height: 1.6; overflow-wrap: anywhere; word-break: break-word;
+  }
+  .r-opt .ro-total b { color: var(--ink); font-weight: 800; }
+
   a { color: var(--teal); }
   :focus-visible { outline: 4px solid var(--lagoon); outline-offset: 3px; border-radius: 8px; }
 
@@ -592,10 +616,11 @@
         <div class="hh-name">Novotel Okinawa Naha</div>
         <div class="hh-en">諾富特沖繩那霸酒店</div>
       </div>
+      <div class="hh-score"><span class="hh-badge">8.8</span><span>評分 8.8/10（563條評價）</span></div>
       <ul class="hh-list">
         <li><span class="hi">📍</span><span>地址：沖繩縣那霸市松川40（位於<b>丘陵高地，俯瞰那霸市景</b>）</span></li>
         <li><span class="hi">🏊</span><span>特色：<b>頂層無邊際泳池</b>（可俯瞰那霸夜景）、約3間餐廳、行政酒廊與行政客房</span></li>
-        <li><span class="hi">🚗</span><span>位置：距<b>那霸碼頭（泊港，出海登船處）約10–15分鐘車程</b>、距那霸機場約20–25分鐘、距國際通約5分鐘車程</span></li>
+        <li><span class="hi">🚗</span><span>位置：距<b>那霸碼頭（泊港，出海登船處）約10–15分鐘車程</b>、距那霸機場約 7 公里／駕車約 20 分鐘、距國際通約5分鐘車程</span></li>
         <li><span class="hi">🅿️</span><span>停車場約每日 <b>JPY 1,500</b></span></li>
         <li><span class="hi">🗓️</span><span>入住 <b>7/28–7/31（3晚）· 9間單人房</b>；入住 15:00 / 退房 11:00</span></li>
       </ul>
@@ -607,9 +632,28 @@
     <p class="rooms-head">🛏️ 房型與房價</p>
     <div class="cards">
       <div class="room" style="grid-column: 1 / -1;">
-        <div class="r-name"><span class="r-num">?</span>房型與房價待確認</div>
-        <div class="r-spec">計劃訂 9 間單人房（每人一間），房型充足。</div>
-        <div class="r-fine">房型與實際房價待確認 — 請提供 trip.com 房型／價錢截圖，或按上方連結查看即時價格。</div>
+        <div class="r-name"><span class="r-num">🛏️</span>標準雙床房</div>
+        <div class="r-spec">2張單人床（0.8–1.3米）· 24平方米 · 城景 · 浴缸 · 私人浴室 · 免費Wi-Fi · 禁煙 · 3–10樓 · 可入住 2 人</div>
+        <div class="r-opts">
+          <div class="r-opt">
+            <div class="ro-k">方案一 · 含 1 份精美早餐（早餐可選）</div>
+            <div class="ro-price">
+              <span class="ro-v">HK$597</span><span class="ro-unit">／房・每晚</span>
+              <span class="ro-was"><s>原價 HK$1,003</s></span><span class="ro-off">機票客戶專享 −38%</span>
+            </div>
+            <div class="ro-total">截圖所示總額（8 間 × 3 晚，連稅及附加費）：<b>HK$15,768</b></div>
+          </div>
+          <div class="r-opt">
+            <div class="ro-k">方案二 · 含 2 份精美早餐</div>
+            <div class="ro-price">
+              <span class="ro-v">HK$733</span><span class="ro-unit">／房・每晚</span>
+              <span class="ro-was"><s>原價 HK$1,231</s></span><span class="ro-off">−38%</span>
+            </div>
+            <div class="ro-total">截圖所示總額（8 間 × 3 晚，連稅及附加費）：<b>HK$19,352</b></div>
+          </div>
+        </div>
+        <div class="r-nightly">條款：<b>不設退款 · 即時確認 · 網上預付</b></div>
+        <div class="r-fine">附註：此為雙床房（可住 2 人）；9 人可按實際同行情況配房（例如部分房間 2 人同住，約 5 間即可），實際房數與總額請於 trip.com 落訂頁確認。</div>
       </div>
     </div>
     <div class="note">
